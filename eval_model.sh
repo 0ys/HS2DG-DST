@@ -1,0 +1,15 @@
+python3 train.py  \
+--load_model \
+--data_root data/mwz2.2/ \
+--train_data train_dials.json \
+--dev_data dev_dials.json \
+--test_data test_dials.json \
+--ontology_data schema.json \
+--load_test_op_data_path cls_score_test_state_update_predictor_output.json \
+--turn 2  \
+--n_history 1 \
+--max_seq_length 512 \
+--feature_size 768 \
+--save_dir saved_models/best_checkpoint \
+--load_ckpt_epoch model_best_turn_0.bin \
+--load_best
